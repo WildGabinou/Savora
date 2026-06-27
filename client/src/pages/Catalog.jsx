@@ -65,16 +65,7 @@ export default function Catalog() {
 
       {filtered.length === 0 && (
         <div className="flex flex-col items-center py-12 text-stone-400">
-          <div
-            style={{
-              width: 140,
-              height: 140,
-              backgroundImage: 'url(/mascotte.png)',
-              backgroundSize: '110% auto',
-              backgroundPosition: '68% 2%',
-              backgroundRepeat: 'no-repeat',
-            }}
-          />
+          <img src="/mascotte.png" alt="Mascotte Savora" className="w-36 object-contain" />
           <p className="font-medium mt-2">Aucune recette trouvée</p>
           <p className="text-sm mt-1">Essayez d'autres mots-clés</p>
         </div>

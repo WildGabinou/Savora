@@ -8,29 +8,13 @@ const nav = [
   { to: '/ajouter', icon: PlusCircle, label: 'Ajouter' },
 ]
 
-// Le logo est une image 3-en-1 : on affiche uniquement le logo du milieu (S avec toque)
-const LogoIcon = ({ size = 48 }) => (
-  <div
-    style={{
-      width: size,
-      height: size,
-      backgroundImage: 'url(/logo.png)',
-      backgroundSize: '300% auto',
-      backgroundPosition: '50% 45%',
-      backgroundRepeat: 'no-repeat',
-      borderRadius: 8,
-      flexShrink: 0,
-    }}
-  />
-)
-
 export default function Layout({ children }) {
   return (
     <div className="flex h-screen overflow-hidden">
       {/* Sidebar desktop */}
       <aside className="hidden md:flex flex-col w-64 bg-white border-r border-stone-100 shrink-0">
-        <div className="flex items-center gap-3 px-5 py-5 border-b border-stone-100">
-          <LogoIcon size={52} />
+        <div className="flex items-center gap-3 px-5 py-4 border-b border-stone-100">
+          <img src="/logo.png" alt="Savora" className="w-12 h-12 object-contain" />
           <div>
             <p className="font-extrabold text-stone-900 text-2xl leading-tight tracking-tight">Savora</p>
             <p className="text-xs text-stone-400">Recettes & Planning</p>
@@ -57,17 +41,8 @@ export default function Layout({ children }) {
         </nav>
 
         {/* Mascotte en bas de la sidebar */}
-        <div className="px-3 pb-4">
-          <div
-            style={{
-              width: '100%',
-              height: 160,
-              backgroundImage: 'url(/mascotte.png)',
-              backgroundSize: '55% auto',
-              backgroundPosition: '10% 15%',
-              backgroundRepeat: 'no-repeat',
-            }}
-          />
+        <div className="flex justify-center pb-2">
+          <img src="/mascotte.png" alt="Mascotte Savora" className="w-40 object-contain" />
         </div>
       </aside>
 

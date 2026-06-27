@@ -31,16 +31,7 @@ export default function ShoppingList() {
   if (shoppingList.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center py-16 px-5 text-center">
-        <div
-          style={{
-            width: 180,
-            height: 180,
-            backgroundImage: 'url(/mascotte.png)',
-            backgroundSize: '55% auto',
-            backgroundPosition: '10% 15%',
-            backgroundRepeat: 'no-repeat',
-          }}
-        />
+        <img src="/mascotte.png" alt="Mascotte Savora" className="w-48 object-contain" />
         <h2 className="text-xl font-bold text-stone-700 mt-2">Liste vide !</h2>
         <p className="text-stone-400 text-sm mt-2 max-w-xs">Planifiez des repas pour la semaine et votre liste de courses apparaîtra ici.</p>
       </div>
