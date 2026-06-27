@@ -30,10 +30,19 @@ export default function ShoppingList() {
 
   if (shoppingList.length === 0) {
     return (
-      <div className="p-5 text-center py-20">
-        <p className="text-5xl mb-4">🛒</p>
-        <h2 className="text-xl font-bold text-stone-700">Liste vide</h2>
-        <p className="text-stone-400 text-sm mt-2">Planifiez des repas pour la semaine pour générer votre liste de courses.</p>
+      <div className="flex flex-col items-center justify-center py-16 px-5 text-center">
+        <div
+          style={{
+            width: 180,
+            height: 180,
+            backgroundImage: 'url(/mascotte.png)',
+            backgroundSize: '55% auto',
+            backgroundPosition: '10% 15%',
+            backgroundRepeat: 'no-repeat',
+          }}
+        />
+        <h2 className="text-xl font-bold text-stone-700 mt-2">Liste vide !</h2>
+        <p className="text-stone-400 text-sm mt-2 max-w-xs">Planifiez des repas pour la semaine et votre liste de courses apparaîtra ici.</p>
       </div>
     )
   }

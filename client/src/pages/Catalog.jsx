@@ -22,7 +22,7 @@ export default function Catalog() {
 
   return (
     <div className="p-5 max-w-4xl mx-auto">
-      <h1 className="text-2xl font-bold text-stone-900 mb-5">Catalogue de recettes</h1>
+      <h1 className="text-2xl font-bold text-stone-900 mb-5">Recettes Savora</h1>
 
       {/* Search */}
       <div className="relative mb-4">
@@ -64,9 +64,18 @@ export default function Catalog() {
       </div>
 
       {filtered.length === 0 && (
-        <div className="text-center py-16 text-stone-400">
-          <p className="text-4xl mb-3">🔍</p>
-          <p className="font-medium">Aucune recette trouvée</p>
+        <div className="flex flex-col items-center py-12 text-stone-400">
+          <div
+            style={{
+              width: 140,
+              height: 140,
+              backgroundImage: 'url(/mascotte.png)',
+              backgroundSize: '110% auto',
+              backgroundPosition: '68% 2%',
+              backgroundRepeat: 'no-repeat',
+            }}
+          />
+          <p className="font-medium mt-2">Aucune recette trouvée</p>
           <p className="text-sm mt-1">Essayez d'autres mots-clés</p>
         </div>
       )}
