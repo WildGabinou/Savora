@@ -1,0 +1,14 @@
+{
+  "name": "cuisine-server",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "cheerio": "^1.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}

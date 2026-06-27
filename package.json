@@ -1,0 +1,13 @@
+{
+  "name": "app-cuisine",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "build": "npm --prefix client run build",
+    "start": "node server/server.js",
+    "install-all": "npm install && npm --prefix server install && npm --prefix client install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
